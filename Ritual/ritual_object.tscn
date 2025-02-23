@@ -1,0 +1,221 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpnmmteyppc1a"]
+
+[ext_resource type="Script" path="res://Ritual/RitualObject.cs" id="1_tl1wx"]
+[ext_resource type="Script" path="res://Ritual/ObjectImage.cs" id="2_a163m"]
+[ext_resource type="Theme" uid="uid://b6kk3tvulkrej" path="res://theme_test.tres" id="2_jwh5l"]
+[ext_resource type="Texture2D" uid="uid://cwp26a1iwoap3" path="res://assets/circulo.png" id="3_ug1gy"]
+
+[node name="RitualObject" type="Node2D"]
+script = ExtResource("1_tl1wx")
+
+[node name="ObjectImage" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 0
+script = ExtResource("2_a163m")
+
+[node name="SelectedHighlight" type="ReferenceRect" parent="ObjectImage"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+border_color = Color(0, 0.52549, 0.764706, 1)
+border_width = 5.0
+editor_only = false
+
+[node name="TextureButton" type="TextureButton" parent="ObjectImage/SelectedHighlight"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(-10, -10)
+texture_normal = ExtResource("3_ug1gy")
+
+[node name="TextureButton2" type="TextureButton" parent="ObjectImage/SelectedHighlight"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="TextureButton3" type="TextureButton" parent="ObjectImage/SelectedHighlight"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="TextureButton4" type="TextureButton" parent="ObjectImage/SelectedHighlight"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+visible = false
+offset_left = 878.0
+offset_top = 128.0
+offset_right = 1103.0
+offset_bottom = 415.0
+
+[node name="PopupObjectEditMenu" type="Popup" parent="."]
+title = "Component edit menu"
+initial_position = 2
+size = Vector2i(420, 209)
+borderless = false
+auto_translate = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PopupObjectEditMenu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupObjectEditMenu/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TabContainer" type="TabContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ClassAndConnections" type="VBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer"]
+layout_mode = 2
+
+[node name="Name" type="HBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/Name"]
+layout_mode = 2
+theme = ExtResource("2_jwh5l")
+theme_override_font_sizes/font_size = 22
+text = "Component Name:"
+
+[node name="NameEdit" type="LineEdit" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/Name"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClassSelection" type="HBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/ClassSelection"]
+layout_mode = 2
+theme = ExtResource("2_jwh5l")
+theme_override_font_sizes/font_size = 22
+text = "Component class:"
+
+[node name="ComponentClassSelector" type="OptionButton" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/ClassSelection"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 5
+selected = 0
+popup/item_0/text = "Select type"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Quintessence"
+popup/item_1/id = 1
+popup/item_2/text = "Augment"
+popup/item_2/id = 2
+popup/item_3/text = "Structure"
+popup/item_3/id = 3
+popup/item_4/text = "Utility"
+popup/item_4/id = 4
+
+[node name="Connections" type="HBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/Connections"]
+layout_mode = 2
+theme = ExtResource("2_jwh5l")
+theme_override_font_sizes/font_size = 22
+text = "Connect to:"
+
+[node name="ComponentConnectionSelector" type="OptionButton" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/Connections"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 1
+selected = 0
+popup/item_0/text = "Select component"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+
+[node name="CircleConfiguration" type="VBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CircleLineWidth" type="HBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration/CircleLineWidth"]
+layout_mode = 2
+theme = ExtResource("2_jwh5l")
+theme_override_font_sizes/font_size = 20
+text = "Circle line width:"
+
+[node name="SpinBox" type="SpinBox" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration/CircleLineWidth"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1000.0
+value = 25.0
+
+[node name="SpaceInBetween" type="HBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration/SpaceInBetween"]
+layout_mode = 2
+theme = ExtResource("2_jwh5l")
+theme_override_font_sizes/font_size = 20
+text = "Space inbetween:"
+
+[node name="SpinBox" type="SpinBox" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration/SpaceInBetween"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1000.0
+value = 100.0
+
+[node name="Color" type="ColorPickerButton" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[connection signal="mouse_entered" from="ObjectImage" to="." method="MouseEntered"]
+[connection signal="mouse_exited" from="ObjectImage" to="." method="MouseExited"]
+[connection signal="close_requested" from="PopupObjectEditMenu" to="." method="CloseRequest"]
+[connection signal="text_submitted" from="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/Name/NameEdit" to="." method="NameChanged"]
+[connection signal="item_selected" from="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/ClassSelection/ComponentClassSelector" to="." method="ComponentClassSelected"]
+[connection signal="item_selected" from="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/Connections/ComponentConnectionSelector" to="." method="ConnectToParent"]
+[connection signal="value_changed" from="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration/CircleLineWidth/SpinBox" to="." method="CircleLineWidthChanged"]
+[connection signal="value_changed" from="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration/SpaceInBetween/SpinBox" to="." method="InBetweenLineWidthChanged"]
+[connection signal="color_changed" from="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/Color" to="." method="CircleColorChanged"]

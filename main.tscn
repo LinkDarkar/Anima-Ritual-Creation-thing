@@ -1,0 +1,432 @@
+[gd_scene load_steps=19 format=3 uid="uid://bqculosbrpmve"]
+
+[ext_resource type="Theme" uid="uid://b6kk3tvulkrej" path="res://theme_test.tres" id="1_5ou71"]
+[ext_resource type="Script" path="res://main.cs" id="1_blm2v"]
+[ext_resource type="Script" path="res://Camera2D.cs" id="1_vojcc"]
+[ext_resource type="PackedScene" uid="uid://to6wvw6nap1d" path="res://Ritual/Ritual.tscn" id="4_afdh0"]
+[ext_resource type="Texture2D" uid="uid://b6c7u3xvwcoog" path="res://assets/joe_test.png" id="5_1maxi"]
+[ext_resource type="Script" path="res://UI/RitualEditMenuPanelContainer.cs" id="5_8pxqu"]
+[ext_resource type="Script" path="res://UI/BringRitualMenuButton.cs" id="5_mhhik"]
+[ext_resource type="FontFile" uid="uid://2276nlcgahre" path="res://fonts/OpenSans-VariableFont_wdth,wght.ttf" id="6_7nb2r"]
+[ext_resource type="Script" path="res://UI/ExitButton_Test.cs" id="7_p0t6r"]
+[ext_resource type="Script" path="res://UI/QuitEditMenuButton.cs" id="9_lfpgn"]
+[ext_resource type="Script" path="res://UI/Image Import/ImportImageButton.cs" id="10_m30v0"]
+[ext_resource type="Script" path="res://UI/PanelContainer_LabelswText.cs" id="11_tgy7w"]
+[ext_resource type="PackedScene" uid="uid://dmx42u7sr0scp" path="res://UI/Image Import/ImportImages.tscn" id="12_7eu8e"]
+[ext_resource type="Script" path="res://UI/PanelContainer_LabelwButtons.cs" id="13_2ad61"]
+
+[sub_resource type="Animation" id="Animation_qjs0r"]
+resource_name = "ClosingAnimation"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-451, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qbb5m"]
+resource_name = "OpeningAnimation"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-451, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_27qmq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-451, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pxemu"]
+_data = {
+"ClosingAnimation": SubResource("Animation_qjs0r"),
+"OpeningAnimation": SubResource("Animation_qbb5m"),
+"RESET": SubResource("Animation_27qmq")
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_blm2v")
+
+[node name="Window" type="Window" parent="."]
+size = Vector2i(1280, 720)
+visible = false
+borderless = true
+mouse_passthrough = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("1_vojcc")
+
+[node name="JoeTest" type="Sprite2D" parent="."]
+position = Vector2(250, 71)
+texture = ExtResource("5_1maxi")
+
+[node name="Ritual" parent="." instance=ExtResource("4_afdh0")]
+
+[node name="RitualCreationUI" type="CanvasLayer" parent="."]
+
+[node name="BringRitualMenuPanel" type="PanelContainer" parent="RitualCreationUI"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 70.0
+offset_bottom = 70.0
+
+[node name="BringRitualMenuButton" type="Button" parent="RitualCreationUI/BringRitualMenuPanel"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_5ou71")
+theme_override_fonts/font = ExtResource("6_7nb2r")
+text = "Edit Menu"
+script = ExtResource("5_mhhik")
+
+[node name="RitualEditMenuPanelContainer" type="PanelContainer" parent="RitualCreationUI"]
+offset_left = -451.0
+offset_bottom = 631.0
+theme = ExtResource("1_5ou71")
+script = ExtResource("5_8pxqu")
+
+[node name="MarginContainer" type="MarginContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Back" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Back"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="QuitEditMenuButton" type="Button" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Back/PanelContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_5ou71")
+text = "Back"
+script = ExtResource("9_lfpgn")
+
+[node name="PanelContainer2" type="PanelContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Back"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="AbilityToCreate" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/AbilityToCreate"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Ability to create it: "
+
+[node name="OptionButton" type="OptionButton" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/AbilityToCreate"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "Secondary Abilities"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Occult"
+popup/item_1/id = 1
+
+[node name="CreationDificulty" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/CreationDificulty"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Creation Difficulty: "
+
+[node name="SpinBox" type="SpinBox" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/CreationDificulty"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="CreationCheck" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/CreationCheck"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Creation check?: "
+
+[node name="SpinBox" type="SpinBox" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/CreationCheck"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="AbilityToPerform" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/AbilityToPerform"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Ability to perform it: "
+
+[node name="OptionButton" type="OptionButton" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/AbilityToPerform"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+item_count = 4
+selected = 0
+popup/item_0/text = "Secondary Abilities"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Ocultism"
+popup/item_1/id = 1
+popup/item_2/text = "Dance"
+popup/item_2/id = 2
+popup/item_3/text = "Music"
+popup/item_3/id = 3
+
+[node name="PerformanceDificulty" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/PerformanceDificulty"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Performance difficulty: "
+
+[node name="SpinBox" type="SpinBox" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/PerformanceDificulty"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="PerformanceCheck" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/PerformanceCheck"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Performance check?: "
+
+[node name="SpinBox" type="SpinBox" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/PerformanceCheck"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="CreationDificulty2" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/CreationDificulty2"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Creation Dificulty: "
+
+[node name="CheckBox" type="CheckBox" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/CreationDificulty2"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="TypeOfTimeDevoted" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/TypeOfTimeDevoted"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Type of time devoted: "
+
+[node name="OptionButton" type="OptionButton" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/TypeOfTimeDevoted"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+item_count = 9
+selected = 0
+popup/item_0/text = "Type of time devoted"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Seconds"
+popup/item_1/id = 1
+popup/item_2/text = "Minutes"
+popup/item_2/id = 2
+popup/item_3/text = "Hours"
+popup/item_3/id = 3
+popup/item_4/text = "Days"
+popup/item_4/id = 4
+popup/item_5/text = "Weeks"
+popup/item_5/id = 5
+popup/item_6/text = "Months"
+popup/item_6/id = 6
+popup/item_7/text = "Years"
+popup/item_7/id = 7
+popup/item_8/text = "Lifetimes"
+popup/item_8/id = 8
+
+[node name="AmountOfTime" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/AmountOfTime"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Amount of time: "
+
+[node name="SpinBox" type="SpinBox" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/AmountOfTime"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="CircumstanceStuff" type="HBoxContainer" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 9.3
+
+[node name="Label" type="Label" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/CircumstanceStuff"]
+layout_mode = 2
+theme = ExtResource("1_5ou71")
+theme_override_font_sizes/font_size = 18
+text = "Circumstance stuff: "
+
+[node name="OptionButton" type="OptionButton" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/CircumstanceStuff"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "Circumstance bullshit"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Occult"
+popup/item_1/id = 1
+
+[node name="VScrollBar" type="VScrollBar" parent="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_5ou71")
+
+[node name="MenuAnimations" type="AnimationPlayer" parent="RitualCreationUI/RitualEditMenuPanelContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_pxemu")
+}
+
+[node name="PanelContainer_LabelswText2" type="PanelContainer" parent="RitualCreationUI"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -146.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 89.0
+grow_horizontal = 0
+script = ExtResource("11_tgy7w")
+
+[node name="MarginContainer" type="MarginContainer" parent="RitualCreationUI/PanelContainer_LabelswText2"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 15
+
+[node name="Label" type="Label" parent="RitualCreationUI/PanelContainer_LabelswText2/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Current ritual is not valid"
+
+[node name="PanelContainer_LabelwButtons2" type="PanelContainer" parent="RitualCreationUI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -71.0
+offset_right = 442.0
+offset_bottom = -10.0
+grow_vertical = 0
+script = ExtResource("13_2ad61")
+
+[node name="MarginContainer" type="MarginContainer" parent="RitualCreationUI/PanelContainer_LabelwButtons2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RitualCreationUI/PanelContainer_LabelwButtons2/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RitualCreationUI/PanelContainer_LabelwButtons2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ExitButton_Test" type="Button" parent="RitualCreationUI/PanelContainer_LabelwButtons2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+toggle_mode = true
+text = "Exit"
+script = ExtResource("7_p0t6r")
+
+[node name="ImportImageButton" type="Button" parent="RitualCreationUI/PanelContainer_LabelwButtons2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+shortcut_in_tooltip = false
+text = "Import Image"
+script = ExtResource("10_m30v0")
+
+[node name="ImportImages" parent="." instance=ExtResource("12_7eu8e")]
+
+[connection signal="mouse_entered" from="RitualCreationUI/RitualEditMenuPanelContainer" to="Camera2D" method="MouseEnteredUI"]
+[connection signal="mouse_exited" from="RitualCreationUI/RitualEditMenuPanelContainer" to="Camera2D" method="MouseExitedUI"]
+[connection signal="item_selected" from="RitualCreationUI/RitualEditMenuPanelContainer/MarginContainer/HBoxContainer/VBoxContainer/TypeOfTimeDevoted/OptionButton" to="Ritual" method="TypesOfTimeChanged"]
+[connection signal="mouse_entered" from="RitualCreationUI/PanelContainer_LabelswText2" to="Camera2D" method="MouseEnteredUI"]
+[connection signal="mouse_exited" from="RitualCreationUI/PanelContainer_LabelswText2" to="Camera2D" method="MouseExitedUI"]
+[connection signal="mouse_entered" from="RitualCreationUI/PanelContainer_LabelwButtons2" to="Camera2D" method="MouseEnteredUI"]
+[connection signal="mouse_exited" from="RitualCreationUI/PanelContainer_LabelwButtons2" to="Camera2D" method="MouseExitedUI"]

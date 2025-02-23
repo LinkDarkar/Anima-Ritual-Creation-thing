@@ -1,0 +1,246 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Godot\\Godot Projects\\Ritual Creation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\ritual\\datatree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:ritual\\datatree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\ritual\\ritualobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:ritual\\ritualobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\ritual\\ritual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:ritual\\ritual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\ritual\\objectimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:ritual\\objectimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\Image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ritual\\Image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Godot\\Godot Projects\\Ritual Creation\\QuitEditMenuButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QuitEditMenuButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\ui\\ritualeditmenupanelcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:ui\\ritualeditmenupanelcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\ui\\panelcontainer_labelswtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:ui\\panelcontainer_labelswtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Godot\\Godot Projects\\Ritual Creation\\BringRitualMenuButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BringRitualMenuButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\ui\\image import\\importimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:ui\\image import\\importimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\drag_and_drop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\drag_and_drop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|d:\\godot\\godot projects\\ritual creation\\ui\\ritualcreationui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED2F8F2-801D-437F-9572-AE2A6DAD2920}|Ritual Creation.csproj|solutionrelative:ui\\ritualcreationui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataTree.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\DataTree.cs",
+              "RelativeDocumentMoniker": "Ritual\\DataTree.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\DataTree.cs",
+              "RelativeToolTip": "Ritual\\DataTree.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T19:24:47.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PanelContainer_LabelswText.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\PanelContainer_LabelswText.cs",
+              "RelativeDocumentMoniker": "UI\\PanelContainer_LabelswText.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\PanelContainer_LabelswText.cs",
+              "RelativeToolTip": "UI\\PanelContainer_LabelswText.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T00:01:09.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BringRitualMenuButton.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\BringRitualMenuButton.cs",
+              "RelativeDocumentMoniker": "BringRitualMenuButton.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\BringRitualMenuButton.cs",
+              "RelativeToolTip": "BringRitualMenuButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T23:45:13.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ImportImages.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\Image Import\\ImportImages.cs",
+              "RelativeDocumentMoniker": "UI\\Image Import\\ImportImages.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\Image Import\\ImportImages.cs",
+              "RelativeToolTip": "UI\\Image Import\\ImportImages.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T03:01:25.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\main.cs",
+              "RelativeDocumentMoniker": "main.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\main.cs",
+              "RelativeToolTip": "main.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAiwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T00:48:02.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Ritual.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\Ritual.cs",
+              "RelativeDocumentMoniker": "Ritual\\Ritual.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\Ritual.cs",
+              "RelativeToolTip": "Ritual\\Ritual.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T21:28:54.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Image.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\Image.cs",
+              "RelativeDocumentMoniker": "Ritual\\Image.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\Image.cs",
+              "RelativeToolTip": "Ritual\\Image.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:03:56.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ObjectImage.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\ObjectImage.cs",
+              "RelativeDocumentMoniker": "Ritual\\ObjectImage.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\ObjectImage.cs",
+              "RelativeToolTip": "Ritual\\ObjectImage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:04:53.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "drag_and_drop.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\drag_and_drop.cs",
+              "RelativeDocumentMoniker": "UI\\drag_and_drop.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\drag_and_drop.cs",
+              "RelativeToolTip": "UI\\drag_and_drop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T01:25:26.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Camera2D.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\Camera2D.cs",
+              "RelativeDocumentMoniker": "Camera2D.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\Camera2D.cs",
+              "RelativeToolTip": "Camera2D.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T23:48:22.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RitualEditMenuPanelContainer.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\RitualEditMenuPanelContainer.cs",
+              "RelativeDocumentMoniker": "UI\\RitualEditMenuPanelContainer.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\RitualEditMenuPanelContainer.cs",
+              "RelativeToolTip": "UI\\RitualEditMenuPanelContainer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T00:03:22.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QuitEditMenuButton.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\QuitEditMenuButton.cs",
+              "RelativeDocumentMoniker": "QuitEditMenuButton.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\QuitEditMenuButton.cs",
+              "RelativeToolTip": "QuitEditMenuButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T00:41:12.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RitualObject.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\RitualObject.cs",
+              "RelativeDocumentMoniker": "Ritual\\RitualObject.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\Ritual\\RitualObject.cs",
+              "RelativeToolTip": "Ritual\\RitualObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T03:53:57.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RitualCreationUI.cs",
+              "DocumentMoniker": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\RitualCreationUI.cs",
+              "RelativeDocumentMoniker": "UI\\RitualCreationUI.cs",
+              "ToolTip": "D:\\Godot\\Godot Projects\\Ritual Creation\\UI\\RitualCreationUI.cs",
+              "RelativeToolTip": "UI\\RitualCreationUI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T21:02:25.205Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
