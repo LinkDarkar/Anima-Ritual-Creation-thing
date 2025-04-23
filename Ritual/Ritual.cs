@@ -31,28 +31,28 @@ public partial class Ritual : Node2D
 	public override void _Ready()
 	{
 		this.abilityForCreation = "Occult";
-        this.creationDifficulty = 0;
-        this.creationCheck = 0;
+		this.creationDifficulty = 0;
+		this.creationCheck = 0;
 
-        this.abilityToPerform = "None";
-        this.performingDifficulty = 0;
-        this.performingCheck = 0;
+		this.abilityToPerform = "None";
+		this.performingDifficulty = 0;
+		this.performingCheck = 0;
 
-        this.typeOfTimeDevoted = TypesOfTime.NONE;
-        this.timeSpentCheckModifier = 0;
-        this.ritualObjects = new Godot.Collections.Array<Node2D>();
+		this.typeOfTimeDevoted = TypesOfTime.NONE;
+		this.timeSpentCheckModifier = 0;
+		this.ritualObjects = new Godot.Collections.Array<Node2D>();
 
-        this.circumstanceModifiers = CircumstanceComplexityModifiers.NONE;
-        this.circumstanceLocationLeylineValue = 0.0f;
-        this.circumstanceWeatherValue = 0;
-        this.circumstanceTimeValue = 0;
-        this.circumstanceRitualNatureValue = 0;
-        this.circumstanceThreeFoldSymmetryValue = 0.0f;
-        this.circumstanceFiveFoldSymmetryValue = 0.0f;
-        this.circumstanceLifeOnTheLineValue = 0;
+		this.circumstanceModifiers = CircumstanceComplexityModifiers.NONE;
+		this.circumstanceLocationLeylineValue = 0.0f;
+		this.circumstanceWeatherValue = 0;
+		this.circumstanceTimeValue = 0;
+		this.circumstanceRitualNatureValue = 0;
+		this.circumstanceThreeFoldSymmetryValue = 0.0f;
+		this.circumstanceFiveFoldSymmetryValue = 0.0f;
+		this.circumstanceLifeOnTheLineValue = 0;
 
-        this.cirumstancePercentageModifiersValue = 0.0f;
-        this.circumstanceFlatModifiersValue = 0;
+		this.cirumstancePercentageModifiersValue = 0.0f;
+		this.circumstanceFlatModifiersValue = 0;
 	}
 
 	public void InitRitualObject (Image image, ImageTexture imageTexture, String filePath)
@@ -171,12 +171,12 @@ public partial class Ritual : Node2D
 		this.typeOfTimeDevoted = (TypesOfTime) newType;
 	}
 
-    public override void _UnhandledInput(InputEvent @event)
-    {
-        // base._UnhandledInput(@event);
-    }
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
+	public override void _UnhandledInput(InputEvent @event)
+	{
+		// base._UnhandledInput(@event);
+	}
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
 	{
 	}
 }

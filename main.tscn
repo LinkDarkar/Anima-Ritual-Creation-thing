@@ -78,13 +78,26 @@ visible = false
 borderless = true
 mouse_passthrough = true
 
+[node name="JoeTest" type="Sprite2D" parent="."]
+position = Vector2(250, 71)
+texture = ExtResource("5_1maxi")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 script = ExtResource("1_vojcc")
 
-[node name="JoeTest" type="Sprite2D" parent="."]
-position = Vector2(250, 71)
-texture = ExtResource("5_1maxi")
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = -461.0
+offset_top = -217.0
+offset_right = 2276.0
+offset_bottom = 1258.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(2737, 1475)
+render_target_update_mode = 4
 
 [node name="Ritual" parent="." instance=ExtResource("4_afdh0")]
 
