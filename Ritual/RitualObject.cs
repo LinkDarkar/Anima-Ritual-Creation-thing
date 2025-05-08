@@ -253,8 +253,8 @@ public partial class RitualObject : Node2D
 	private void ResizeWithMouseMovement(InputEventMouseMotion mouseMotionEvent, bool keepRatio=true)
 	{
 		// Changes the size
-		int widthDelta = (int)(mouseMotionEvent.Relative.X * (this.resizeButtonPressed.right ? 1f : -1f));
-		int heightDelta = (int)(mouseMotionEvent.Relative.Y * (this.resizeButtonPressed.bottom ? 1f : -1f));
+		int widthDelta = (int)((mouseMotionEvent.Relative.X / camera2D.Zoom.X) * (this.resizeButtonPressed.right ? 1f : -1f));
+		int heightDelta = (int)((mouseMotionEvent.Relative.Y / camera2D.Zoom.Y) * (this.resizeButtonPressed.bottom ? 1f : -1f));
 		int newWidth = (int)(this.resizedImage.GetSize().X + widthDelta);
 		int newHeight = keepRatio ? (int)(newWidth * this.aspectRatioFactor) : (int)(this.resizedImage.GetSize().Y + heightDelta);
 
@@ -265,7 +265,7 @@ public partial class RitualObject : Node2D
 		* TODO
 		* I think it kinda works well now
 		*/
-		float posXDelta = this.resizeButtonPressed.right ? 0f : mouseMotionEvent.Relative.X;
+		float posXDelta = this.resizeButtonPressed.right ? 0f : (mouseMotionEvent.Relative.X / camera2D.Zoom.X);
 		float posYDelta = 0f;
 		// float posYDelta = keepRatio ? (this.resizeButtonPressed.bottom ? mouseMotionEvent.Relative.Y : 0f) : (posXDelta);  
 		// float posYDelta = this.resizeButtonPressed.bottom ? 0f : mouseMotionEvent.Relative.Y;  

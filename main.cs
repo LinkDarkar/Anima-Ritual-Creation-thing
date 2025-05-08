@@ -47,9 +47,9 @@ public partial class main : Node2D
 		}
 	}
 
-    public override async void _Input(InputEvent @event)
-    {
-        base._Input(@event);
+	public override async void _Input(InputEvent @event)
+	{
+		base._Input(@event);
 		if (Input.IsActionJustPressed("save_test"))
 		{
 			GetViewport().TransparentBg = true;
@@ -59,11 +59,11 @@ public partial class main : Node2D
 			GetViewport().TransparentBg = false;
 			GetNode<CanvasLayer>("RitualCreationUI").Visible = true;
 		}
-    }
+	}
 
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
 	{
 		QueueRedraw();
 	}
