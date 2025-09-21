@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://to6wvw6nap1d"]
 
-[ext_resource type="Script" path="res://Ritual/Ritual.cs" id="1_t18ra"]
+[ext_resource type="Script" uid="uid://dvfjr301lam2s" path="res://Ritual/Ritual.cs" id="1_t18ra"]
 
 [node name="Ritual" type="Node2D"]
 script = ExtResource("1_t18ra")

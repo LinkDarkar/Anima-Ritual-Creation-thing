@@ -1,19 +1,19 @@
 [gd_scene load_steps=19 format=3 uid="uid://bqculosbrpmve"]
 
 [ext_resource type="Theme" uid="uid://b6kk3tvulkrej" path="res://theme_test.tres" id="1_5ou71"]
-[ext_resource type="Script" path="res://main.cs" id="1_blm2v"]
-[ext_resource type="Script" path="res://Camera2D.cs" id="1_vojcc"]
+[ext_resource type="Script" uid="uid://c41u6vojc6ua1" path="res://main.cs" id="1_blm2v"]
+[ext_resource type="Script" uid="uid://c7esdyvda6fam" path="res://Camera2D.cs" id="1_vojcc"]
 [ext_resource type="PackedScene" uid="uid://to6wvw6nap1d" path="res://Ritual/Ritual.tscn" id="4_afdh0"]
 [ext_resource type="Texture2D" uid="uid://b6c7u3xvwcoog" path="res://assets/joe_test.png" id="5_1maxi"]
-[ext_resource type="Script" path="res://UI/RitualEditMenuPanelContainer.cs" id="5_8pxqu"]
-[ext_resource type="Script" path="res://UI/BringRitualMenuButton.cs" id="5_mhhik"]
+[ext_resource type="Script" uid="uid://cv0xc2glp1w7l" path="res://UI/RitualEditMenuPanelContainer.cs" id="5_8pxqu"]
+[ext_resource type="Script" uid="uid://bipr8je3faoow" path="res://UI/BringRitualMenuButton.cs" id="5_mhhik"]
 [ext_resource type="FontFile" uid="uid://2276nlcgahre" path="res://fonts/OpenSans-VariableFont_wdth,wght.ttf" id="6_7nb2r"]
-[ext_resource type="Script" path="res://UI/ExitButton_Test.cs" id="7_p0t6r"]
-[ext_resource type="Script" path="res://UI/QuitEditMenuButton.cs" id="9_lfpgn"]
-[ext_resource type="Script" path="res://UI/Image Import/ImportImageButton.cs" id="10_m30v0"]
-[ext_resource type="Script" path="res://UI/PanelContainer_LabelswText.cs" id="11_tgy7w"]
+[ext_resource type="Script" uid="uid://qefy5ybyfncu" path="res://UI/ExitButton_Test.cs" id="7_p0t6r"]
+[ext_resource type="Script" uid="uid://b4uqvinfqghol" path="res://UI/QuitEditMenuButton.cs" id="9_lfpgn"]
+[ext_resource type="Script" uid="uid://dr5q5mqfgja2" path="res://UI/Image Import/ImportImageButton.cs" id="10_m30v0"]
+[ext_resource type="Script" uid="uid://0fbex1g0h2pt" path="res://UI/PanelContainer_LabelswText.cs" id="11_tgy7w"]
 [ext_resource type="PackedScene" uid="uid://dmx42u7sr0scp" path="res://UI/Image Import/ImportImages.tscn" id="12_7eu8e"]
-[ext_resource type="Script" path="res://UI/PanelContainer_LabelwButtons.cs" id="13_2ad61"]
+[ext_resource type="Script" uid="uid://bgudrjkg8h23w" path="res://UI/PanelContainer_LabelwButtons.cs" id="13_2ad61"]
 
 [sub_resource type="Animation" id="Animation_qjs0r"]
 resource_name = "ClosingAnimation"
@@ -64,9 +64,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pxemu"]
 _data = {
-"ClosingAnimation": SubResource("Animation_qjs0r"),
-"OpeningAnimation": SubResource("Animation_qbb5m"),
-"RESET": SubResource("Animation_27qmq")
+&"ClosingAnimation": SubResource("Animation_qjs0r"),
+&"OpeningAnimation": SubResource("Animation_qbb5m"),
+&"RESET": SubResource("Animation_27qmq")
 }
 
 [node name="Main" type="Node2D"]
@@ -171,8 +171,8 @@ text = "Ability to create it: "
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-item_count = 2
 selected = 0
+item_count = 2
 popup/item_0/text = "Secondary Abilities"
 popup/item_0/id = 0
 popup/item_0/disabled = true
@@ -224,8 +224,8 @@ text = "Ability to perform it: "
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-item_count = 4
 selected = 0
+item_count = 4
 popup/item_0/text = "Secondary Abilities"
 popup/item_0/id = 0
 popup/item_0/disabled = true
@@ -296,8 +296,8 @@ text = "Type of time devoted: "
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-item_count = 9
 selected = 0
+item_count = 9
 popup/item_0/text = "Type of time devoted"
 popup/item_0/id = 0
 popup/item_0/disabled = true
@@ -348,8 +348,8 @@ text = "Circumstance stuff: "
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-item_count = 2
 selected = 0
+item_count = 2
 popup/item_0/text = "Circumstance bullshit"
 popup/item_0/id = 0
 popup/item_0/disabled = true
@@ -364,7 +364,7 @@ theme = ExtResource("1_5ou71")
 
 [node name="MenuAnimations" type="AnimationPlayer" parent="RitualCreationUI/RitualEditMenuPanelContainer"]
 libraries = {
-"": SubResource("AnimationLibrary_pxemu")
+&"": SubResource("AnimationLibrary_pxemu")
 }
 
 [node name="PanelContainer_LabelswText2" type="PanelContainer" parent="RitualCreationUI"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpnmmteyppc1a"]
 
-[ext_resource type="Script" path="res://Ritual/RitualObject.cs" id="1_tl1wx"]
-[ext_resource type="Script" path="res://Ritual/ObjectImage.cs" id="2_a163m"]
+[ext_resource type="Script" uid="uid://dvagrxbru66eg" path="res://Ritual/RitualObject.cs" id="1_tl1wx"]
+[ext_resource type="Script" uid="uid://cwfk3nqnnov5t" path="res://Ritual/ObjectImage.cs" id="2_a163m"]
 [ext_resource type="Theme" uid="uid://b6kk3tvulkrej" path="res://theme_test.tres" id="2_jwh5l"]
 [ext_resource type="Texture2D" uid="uid://cwp26a1iwoap3" path="res://assets/circulo.png" id="3_ug1gy"]
 
@@ -122,6 +122,7 @@ offset_right = 1103.0
 offset_bottom = 415.0
 
 [node name="PopupObjectEditMenu" type="Popup" parent="."]
+auto_translate_mode = 2
 title = "Component edit menu"
 initial_position = 2
 size = Vector2i(420, 209)
@@ -144,9 +145,11 @@ theme_override_constants/margin_bottom = 5
 
 [node name="TabContainer" type="TabContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer"]
 layout_mode = 2
+current_tab = 0
 
 [node name="ClassAndConnections" type="VBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer"]
 layout_mode = 2
+metadata/_tab_index = 0
 
 [node name="Name" type="HBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections"]
 layout_mode = 2
@@ -173,8 +176,8 @@ text = "Component class:"
 [node name="ComponentClassSelector" type="OptionButton" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/ClassSelection"]
 layout_mode = 2
 size_flags_horizontal = 3
-item_count = 5
 selected = 0
+item_count = 5
 popup/item_0/text = "Select type"
 popup/item_0/id = 0
 popup/item_0/disabled = true
@@ -200,8 +203,8 @@ text = "Connect to:"
 [node name="ComponentConnectionSelector" type="OptionButton" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/ClassAndConnections/Connections"]
 layout_mode = 2
 size_flags_horizontal = 3
-item_count = 1
 selected = 0
+item_count = 1
 popup/item_0/text = "Select component"
 popup/item_0/id = 0
 popup/item_0/disabled = true
@@ -210,6 +213,7 @@ popup/item_0/separator = true
 [node name="CircleConfiguration" type="VBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="CircleLineWidth" type="HBoxContainer" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer/CircleConfiguration"]
 layout_mode = 2
@@ -244,6 +248,7 @@ value = 100.0
 [node name="Color" type="ColorPickerButton" parent="PopupObjectEditMenu/PanelContainer/MarginContainer/TabContainer"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 visible = false
